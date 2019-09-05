@@ -17,7 +17,7 @@ def min_check():
         s = 0
 
 
-labData = data_handler.File('new_test')
+labData = data_handler.File('JSON File Name')
 root = tk.Tk()
 
 pauseReq = False
@@ -80,7 +80,6 @@ def request(var, boolean: bool):
             resetReq = False
             time.set(f'{"%02d" % m}:{"%02d" % s}')
             root.update()
-
     else:
         raise ValueError('vAlUeErRoR 91 2[e;')
 
@@ -98,7 +97,7 @@ pause = tk.Button(root, padx=5, pady=5, text='Pause', command=lambda *args: requ
 reset = tk.Button(root, padx=5, pady=5, text='Reset', command=lambda *args: request('reset', True))
 data = tk.Entry(root)
 log = tk.Button(root, padx=5, pady=5, text='Log', command=lambda *args: log_data())
-export = tk.Button(root, padx=5, pady=5, text='Export', command=lambda *args: labData.export('Test Exp'))
+export = tk.Button(root, padx=5, pady=5, text='Export', command=lambda *args: labData.export('Export File Name'))
 graph = tk.Button(root, padx=5, pady=5, text='Graph', command=lambda *args: graph_data(labData.name))
 
 display.grid(row=0, column=0)
