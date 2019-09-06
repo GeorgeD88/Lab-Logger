@@ -90,7 +90,11 @@ def request(var, boolean: bool):
 
 # Saves new measurement at time of button press to the JSON file.
 def log_data():
-    labData.new([f'{"%02d" % m}:{"%02d" % s}', float(data.get())])
+    try:  # Tries to convert the measurement into a float, if the input isn't a number it will set the input to 0.
+        to_log = float(data.get())
+    except ValueError:
+        to_log = 0.0
+    labData.new([f'{"%02d" % m}:{"%02d" % s}', to_log])
     data.delete(0, tk.END)  # Deletes what was in the textbox.
 
 
