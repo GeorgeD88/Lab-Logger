@@ -1,6 +1,6 @@
 # Lab-Logger
 Lab-Logger is a GUI program that can be used to take measurements with time to make taking lab measurements easier. The way the program works is by displaying a stopwatch timer, entry box, and a few buttons: start, pause, reset, log, graph, and export.   
-The user starts the stopwatch and whenever would like to take a measurement would type the measurement in the entry box and press log. The program then takes the measurement and current time and saves them to a JSON file as a list pair `["00:00", 0]`
+The user starts the stopwatch and would type a measurement in the entry box and press log whenever they would like to take a measurement. The program then saves the measurement and time of measurement to a JSON file as a list pair `["00:00", 0]`
 
 ## Buttons
 Here are the different buttons and what they do.
